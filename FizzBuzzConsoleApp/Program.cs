@@ -8,8 +8,11 @@
         static void Main(string[] args)
         {
             var fizzBuzzer = new FizzBuzz();
-            string value = fizzBuzzer.DemoMethod();
-            Console.WriteLine(value);
+            var fizzBuzzClass = new FizzBuzz();
+
+            // act
+            var output = fizzBuzzClass.FizzBuzzValuesForRange(1, 20);
+            Console.WriteLine(output);
             Console.ReadKey();
         }
     }

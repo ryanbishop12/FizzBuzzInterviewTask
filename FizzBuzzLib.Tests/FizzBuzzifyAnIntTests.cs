@@ -1,6 +1,7 @@
 namespace FizzBuzzLib.Tests
 {
     using FluentAssertions;
+    using System.Collections.Generic;
     using Xunit;
 
     public class FizzBuzzifyAnIntTests
@@ -68,6 +69,19 @@ namespace FizzBuzzLib.Tests
 
             //assert
             output.Should().Be("FizzBuzz");
+        }
+
+        [Fact]
+        public void FizzBuzzValuesForRange_WhenPassedAFifteen_ReturnsFizzBuzz()
+        {
+            // arrange
+            var fizzBuzzClass = new FizzBuzz();
+
+            // act
+            var output = fizzBuzzClass.FizzBuzzValuesForRange(1, 20);
+
+            //assert
+            output.Should().Equal(new List<string> { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", "16", "17", "Fizz", "19", "Buzz" });
         }
     }
 }
