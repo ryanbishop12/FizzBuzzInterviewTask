@@ -11,7 +11,7 @@
             var fizzBuzzClass = new FizzBuzz();
 
             // act
-            var output = fizzBuzzClass.FizzBuzzValuesForRange(1, 20);
+            var output = fizzBuzzClass.FizzBuzzValuesForRange(1, 100);
             Console.WriteLine(output);
             Console.ReadKey();
         }
